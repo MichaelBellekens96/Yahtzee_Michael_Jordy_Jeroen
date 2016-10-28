@@ -7,8 +7,8 @@
     <ProjectGuid>{85F3DDAC-69A6-4DC9-9C49-F9CCB7DEE837}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WindowsFormsApplication6</RootNamespace>
-    <AssemblyName>WindowsFormsApplication6</AssemblyName>
+    <RootNamespace>Yahtzee</RootNamespace>
+    <AssemblyName>Yahtzee</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DiceUpdateBtnUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DiceUpdateBtnUI.Designer.cs">
+      <DependentUpon>DiceUpdateBtnUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,14 +60,25 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DiceController.cs" />
-    <Compile Include="DiceModel.cs" />
-    <Compile Include="DiceUI.cs">
+    <Compile Include="Dice\DiceController.cs" />
+    <Compile Include="Dice\DiceModel.cs" />
+    <Compile Include="Dice\DiceUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DiceUI.Designer.cs">
+    <Compile Include="Dice\DiceUI.Designer.cs">
       <DependentUpon>DiceUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Score\ScoreController.cs" />
+    <Compile Include="Score\ScoreModel.cs" />
+    <Compile Include="Score\ScoreUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Score\ScoreUI.Designer.cs">
+      <DependentUpon>ScoreUI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DiceUpdateBtnUI.resx">
+      <DependentUpon>DiceUpdateBtnUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -70,11 +87,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="DiceUI.resx">
+    <EmbeddedResource Include="Dice\DiceUI.resx">
       <DependentUpon>DiceUI.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ClassDiagram1.cd" />
+    <EmbeddedResource Include="Score\ScoreUI.resx">
+      <DependentUpon>ScoreUI.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -88,6 +108,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -6,22 +6,25 @@ using System.Threading.Tasks;
 
 namespace Yahtzee
 {
-    class DiceModel
+    public class DiceModel
     {
+        protected int _value;
+        private Boolean _isFixed;
 
-        private int _ValueType;
-        private bool _isFixed;
-
-        public int ValueType
+        public DiceModel()
         {
+            this._value = 0;
+            this._isFixed = false;
+        }
+
+        public int value {
             get
             {
-                return this._ValueType;
+                return this._value;
             }
-
             set
             {
-                this._ValueType = value;
+                this._value = value;
             }
         }
 

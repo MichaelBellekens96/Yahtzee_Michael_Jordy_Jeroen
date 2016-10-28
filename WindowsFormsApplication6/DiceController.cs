@@ -3,47 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Yahtzee
 {
     public class DiceController
     {
-        protected DiceUI diceUI;
-        protected DiceModel diceModel;
-        protected Random randomGenerator;
+        private UserControl _diceUI;
+        private DiceModel _diceModel;
 
         public DiceController()
         {
-            // Create dice model
-            this.diceModel = new DiceModel();
-
-            // Create dice UI and inject controller (= this)
-            // Injection is necessary in order for the UI to notify something has happened
-            this.diceUI = new DiceUI( this );
-
-            // Create new random generator using seed (for absolute random generation)
-            this.randomGenerator = new Random(Guid.NewGuid().GetHashCode());
+            this._diceUI = new DiceUI( this );
+            this._diceModel = new DiceModel();
         }
 
-        // Method that returns instance of the view
-        public DiceUI view
+        public UserControl getView()
         {
-            get {
-                return this.diceUI;
-            }
+            return this._diceUI;
         }
 
-        // Method that throws dice by generating new random number
+        
+
         public int throwDice()
         {
-            // Generate new random number
-            int randomNumber = this.randomGenerator.Next(1, 7);
+            //int randomValue = this._randomGenerator.Next(1,7);
+            //this._diceModel.value = randomValue;
+            int value = 5;
 
-            // Update the model
-            this.diceModel.value = randomNumber;
-
-            // Return the value
-            return randomNumber;
+            return value;
+            //return randomValue;
         }
+
     }
 }
