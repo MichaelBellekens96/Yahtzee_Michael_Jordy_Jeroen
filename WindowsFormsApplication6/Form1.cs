@@ -15,6 +15,9 @@ namespace Yahtzee
         public Form1()
         {
             InitializeComponent();
+            customInitializeMethod();
+
         }
+
     }
 }
