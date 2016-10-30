@@ -80,29 +80,18 @@ namespace Yahtzee
         /// </summary>
         private void InitializeComponent()
         {
-            this.helpUI1 = new Yahtzee.HelpUI();
             this.SuspendLayout();
-            // 
-            // helpUI1
-            // 
-            this.helpUI1.Location = new System.Drawing.Point(12, 278);
-            this.helpUI1.Name = "helpUI1";
-            this.helpUI1.Size = new System.Drawing.Size(100, 34);
-            this.helpUI1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(453, 324);
-            this.Controls.Add(this.helpUI1);
+            this.ClientSize = new System.Drawing.Size(464, 336);
             this.Name = "Form1";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private HelpUI helpUI1;
     }
 }
 
