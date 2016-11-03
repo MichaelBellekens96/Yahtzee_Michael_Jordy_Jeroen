@@ -28,19 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.btnHelp = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // btnHelp
             // 
-            this.btnHelp.Location = new System.Drawing.Point(3, 3);
+            this.btnHelp.Location = new System.Drawing.Point(21, 3);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(90, 28);
+            this.btnHelp.Size = new System.Drawing.Size(108, 29);
             this.btnHelp.TabIndex = 0;
             this.btnHelp.Text = "Help";
-            this.toolTip1.SetToolTip(this.btnHelp, "Bekijk de spelregels");
             this.btnHelp.UseVisualStyleBackColor = true;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
@@ -50,7 +47,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnHelp);
             this.Name = "HelpUI";
-            this.Size = new System.Drawing.Size(100, 34);
+            this.Size = new System.Drawing.Size(145, 35);
             this.ResumeLayout(false);
 
         }
@@ -58,6 +55,5 @@
         #endregion
 
         private System.Windows.Forms.Button btnHelp;
-        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

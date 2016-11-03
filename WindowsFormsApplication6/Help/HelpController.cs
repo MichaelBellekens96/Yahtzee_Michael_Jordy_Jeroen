@@ -8,7 +8,7 @@ using System.Diagnostics;
 
 namespace Yahtzee
 {
-    public class HelpController
+    class HelpController
     {
         public HelpController()
         {

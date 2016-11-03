@@ -10,10 +10,13 @@ namespace Yahtzee
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
+        public object Prompt { get; private set; }
+
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+ 
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -80,18 +83,31 @@ namespace Yahtzee
         /// </summary>
         private void InitializeComponent()
         {
+            this.helpUI1 = new Yahtzee.HelpUI();
             this.SuspendLayout();
+            // 
+            // helpUI1
+            // 
+            this.helpUI1.Location = new System.Drawing.Point(13, 289);
+            this.helpUI1.Name = "helpUI1";
+            this.helpUI1.Size = new System.Drawing.Size(145, 35);
+            this.helpUI1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(464, 336);
+            this.Controls.Add(this.helpUI1);
             this.Name = "Form1";
             this.ResumeLayout(false);
 
         }
 
+
+
         #endregion
+
+        private HelpUI helpUI1;
     }
 }
 

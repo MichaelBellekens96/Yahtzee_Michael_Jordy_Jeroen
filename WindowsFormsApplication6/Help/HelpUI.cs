@@ -19,9 +19,8 @@ namespace Yahtzee
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            HelpController test= new HelpController();
+            HelpController test = new HelpController();
             test.getPathString();
-
         }
     }
 }
