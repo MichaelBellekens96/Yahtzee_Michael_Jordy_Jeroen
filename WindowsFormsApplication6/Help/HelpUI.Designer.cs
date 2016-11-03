@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnHelp = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // btnHelp
@@ -38,6 +40,7 @@
             this.btnHelp.Size = new System.Drawing.Size(108, 29);
             this.btnHelp.TabIndex = 0;
             this.btnHelp.Text = "Help";
+            this.toolTip1.SetToolTip(this.btnHelp, "Open de spelregels van Yahtzee");
             this.btnHelp.UseVisualStyleBackColor = true;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
@@ -55,5 +58,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnHelp;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
