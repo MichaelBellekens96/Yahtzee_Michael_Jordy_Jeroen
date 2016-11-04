@@ -22,5 +22,10 @@ namespace Yahtzee
         {
             this.scoreValueLabel.Text = newScore.ToString();
         }
+
+        public void updateBesteWorp(string besteWorp)
+        {
+            this.lblGegooid.Text = besteWorp.ToString();
+        }
     }
 }
