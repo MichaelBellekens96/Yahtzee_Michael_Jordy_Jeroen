@@ -15,6 +15,30 @@ namespace Yahtzee
             this._score = 0;
         }
 
+        protected string _besteWorp;
+        public string besteWorp
+        {
+            get
+            {
+                return this._besteWorp;
+            }
+            set
+            {
+                this._besteWorp = value;
+            }
+        }
+        protected string _hoogstMogelijkeScore;
+        public string hoogstMogelijkeScore
+        {
+            get
+            {
+                return this._hoogstMogelijkeScore;
+            }
+            set
+            {
+                this._hoogstMogelijkeScore = value;
+            }
+        }
         public int score {
             get {
                 return this._score;
